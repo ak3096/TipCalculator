@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     float percentage = 0;
     float tipTotal = 0;
     float finalBillAmount = 0;
-    float totalBillAmount=0;
+    float totalBillAmount = 0;
 
     float DEFAULT_PERCENTAGE = 5;
     float REGULAR_PERCENTAGE = 10;
@@ -75,16 +75,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculateFinalBill() {
-        if(percentage==0){
-            percentage=REGULAR_PERCENTAGE;
+        if (percentage == 0) {
+            percentage = REGULAR_PERCENTAGE;
         }
-        if(!etBillAmount.getText().toString().equals("") && !etBillAmount.getText().toString().equals(".")){
-           totalBillAmount=Float.valueOf(etBillAmount.getText().toString());
-        }
-            else
-                totalBillAmount=0;
-                tipTotal=(totalBillAmount*percentage)/100;
-                finalBillAmount=totalBillAmount+tipTotal;
-        }
+        if (!etBillAmount.getText().toString().equals("") && !etBillAmount.getText().toString().equals(".")) {
+            totalBillAmount = Float.valueOf(etBillAmount.getText().toString());
+        } else
+            totalBillAmount = 0;
+        tipTotal = (totalBillAmount * percentage) / 100;
+        finalBillAmount = totalBillAmount + tipTotal;
     }
+}
 
